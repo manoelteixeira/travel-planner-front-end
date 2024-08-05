@@ -1,1 +1,9 @@
 // src/styles/App.scss
+@import "../styles/colors";
+
+.app {
+  width: 100vw;
+  height: 100vh;
+  background-color: $bg_color;
+  color: $accent_color;
+}

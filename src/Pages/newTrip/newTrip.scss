@@ -1,0 +1,20 @@
+// src/Pages/newTrip/NewTrip.scss
+// @import "../../styles/colors";
+.new-trip {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  justify-items: center;
+
+  &__title {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 38px;
+  }
+
+  &__form {
+    margin-top: 50px;
+    width: 60%;
+  }
+}

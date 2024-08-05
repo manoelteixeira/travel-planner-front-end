@@ -1,0 +1,62 @@
+// src/Pages/showTrip/showTrip.scss
+@import "../../styles/colors";
+
+.trip {
+  &__header {
+    width: 100%;
+    display: grid;
+    padding: 30px;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 20px;
+    place-items: center;
+    justify-items: center;
+
+    &-image {
+      // padding: 20px;
+      border-radius: 50px;
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      // border: 4px solid $accent_color;
+    }
+
+    &-details {
+      width: 100%;
+      height: 350px;
+      display: grid;
+      grid-template-rows: auto auto 1fr;
+      place-items: center;
+      justify-items: center;
+      border: 4px dashed $accent_color;
+      border-radius: 20px;
+    }
+
+    &-title {
+      margin-top: 20px;
+      font-size: 38px;
+      letter-spacing: 0.1em;
+      font-weight: bolder;
+      text-align: center;
+    }
+
+    &-city {
+      font-size: 24px;
+      letter-spacing: 0.3em;
+      font-weight: lighter;
+      font-style: italic;
+      text-align: center;
+    }
+
+    &-description {
+      font-size: 18px;
+      text-align: left;
+      overflow-y: scroll;
+      padding: 30px;
+    }
+  }
+
+  &__places {
+    display: flex;
+    justify-content: space-around;
+  }
+}

@@ -1,0 +1,15 @@
+// src/Components/loading/loading.scss
+.loading {
+  padding: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+  justify-items: center;
+  row-gap: 10px;
+
+  &__message {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+}

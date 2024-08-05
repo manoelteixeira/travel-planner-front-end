@@ -1,0 +1,28 @@
+// src/Components/tripPlace/tripPlaceCard.scss
+@import "../../styles/colors";
+.trip-place-card {
+  width: 200px;
+  height: 250px;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+  justify-items: center;
+  border: 4px solid $accent_color;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: $bg_color;
+  &:hover {
+    scale: 1.1;
+  }
+  &__image {
+    border-radius: 20px;
+    width: 100%;
+    // aspect-ratio: auto;
+  }
+
+  &__name {
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+}
