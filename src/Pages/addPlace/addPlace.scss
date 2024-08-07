@@ -1,0 +1,29 @@
+// src/Pages/addPlace/addPlace.scss
+@import "../../styles/colors";
+
+.add-places {
+  padding: 40px;
+  display: grid;
+  justify-items: center;
+  place-items: center;
+
+  &__title {
+    font-size: 36px;
+    font-weight: bolder;
+  }
+
+  &__items {
+    padding: 50px;
+    height: 80vh;
+    // display: grid;
+    // grid-template-columns: repeat(4, 1fr);
+    // grid-auto-flow: dense;
+    // gap: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    // justify-content: space-around;
+    // place-content: center;
+    gap: 50px;
+    overflow-y: scroll;
+  }
+}

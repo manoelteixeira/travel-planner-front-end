@@ -1,0 +1,70 @@
+// src/Components/placeCard/placeCard.scss
+@import "../../styles/colors";
+
+.place-card {
+  width: 300px;
+  min-height: 350px;
+  height: fit-content;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 5px;
+  border: 4px solid $accent_color;
+  border-radius: 20px;
+  padding: 10px;
+  background-color: $bg_color;
+
+  &__image {
+    border-radius: 20px;
+    width: 100%;
+  }
+
+  &__name {
+    margin-top: 10px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: bolder;
+  }
+
+  &__description {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-style: italic;
+    max-height: 150px;
+    overflow-y: scroll;
+  }
+
+  &__city,
+  &__address {
+    color: $secondary_color;
+    font-style: oblique;
+    span {
+      font-style: normal;
+      color: $primary_color;
+    }
+  }
+
+  &__controls {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-around;
+    font-size: 36px;
+
+    &-add {
+      padding: 8px 15px;
+      border: 6px solid $accent_color;
+      border-radius: 50%;
+
+      &:hover {
+        color: $secondary_color;
+        border-color: $secondary_color;
+      }
+    }
+  }
+}
+
+.add {
+  color: $secondary_color;
+  border-color: $secondary_color;
+}

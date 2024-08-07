@@ -1,19 +1,17 @@
 // src/Components/tripPlace/tripPlaceCard.scss
 @import "../../styles/colors";
+
 .trip-place-card {
-  width: 200px;
-  height: 250px;
+  width: 300px;
+  min-height: 350px;
+  height: fit-content;
   display: grid;
   grid-template-columns: 1fr;
-  align-items: center;
-  justify-items: center;
   border: 4px solid $accent_color;
   border-radius: 20px;
   padding: 10px;
   background-color: $bg_color;
-  &:hover {
-    scale: 1.1;
-  }
+
   &__image {
     border-radius: 20px;
     width: 100%;
@@ -21,8 +19,66 @@
   }
 
   &__name {
-    font-size: 28px;
+    margin-top: 20px;
+    font-size: 22px;
     font-weight: bold;
     text-transform: capitalize;
+    text-align: center;
+  }
+
+  &__info {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+
+    &-description {
+      margin-top: 10px;
+      text-align: justify;
+      font-style: italic;
+    }
+    &-city,
+    &-address {
+      text-align: start;
+      font-weight: bold;
+      color: $primary_color;
+      span {
+        font-weight: lighter;
+        color: $secondary_color;
+      }
+    }
+  }
+
+  &__controls {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    font-size: 24px;
+
+    &-info {
+      color: $primary_color;
+      &:hover {
+        color: $accent_color;
+      }
+    }
+
+    &-like:hover,
+    &-visit:hover {
+      color: $secondary_color;
+    }
+
+    &-delete {
+      color: $warning_color;
+      &:hover {
+        color: $accent_color;
+      }
+    }
+  }
+}
+
+.selected {
+  color: $secondary_color;
+  &:hover {
+    color: $accent_color;
   }
 }

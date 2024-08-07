@@ -7,6 +7,7 @@ import NewTrip from "./Pages/newTrip/NewTrip";
 import EditTrip from "./Pages/editTrip/EditTrip";
 import NewPlace from "./Pages/newPlace/NewPlace";
 import ShowTrip from "./Pages/showTrip/ShowTrip";
+import AddPlace from "./Pages/addPlace/AddPlace";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/new-place" element={<NewPlace />} />
         <Route path="/trip/:trip_id" element={<ShowTrip />} />
         <Route path="/trip/:trip_id/edit" element={<EditTrip />} />
+        <Route path="/trip/:trip_id/add-place" element={<AddPlace />} />
       </Routes>
     </div>
   );

@@ -5,17 +5,27 @@ import { useEffect, useState } from "react";
 
 export default function Navbar() {
   const location = useLocation();
+
   const [linkPath, setLinkPath] = useState(null);
-  // console.log(location);
 
   useEffect(() => {
     const { pathname } = location;
-    switch (pathname) {
-      case "/home":
-        setLinkPath({ path: "/new-trip", text: "New Trip" });
-        break;
-      default:
-        setLinkPath(null);
+    const path = pathname.split("/");
+    if (path.includes("home")) {
+      setLinkPath({ path: "/new-trip", text: "New Trip" });
+    } else if (path.includes("add-place")) {
+      setLinkPath({
+        path: `..`,
+        text: "Add New Place",
+      });
+    } else if (path.includes("trip")) {
+      const trip_id = path[path.length - 1];
+      setLinkPath({
+        path: `/trip/${trip_id}/add-place`,
+        text: "Add Place To Visit",
+      });
+    } else {
+      setLinkPath(null);
     }
   }, [location]);
 

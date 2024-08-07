@@ -17,7 +17,10 @@ export default function ShowTrip() {
     console.log(url);
     fetch(url)
       .then((res) => res.json())
-      .then((res) => setTrip(res))
+      .then((res) => {
+        console.log(res);
+        setTrip(res);
+      })
       .catch((error) => console.log(error));
   }, [trip_id]);
 
